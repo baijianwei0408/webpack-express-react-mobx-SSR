@@ -1,0 +1,11 @@
+.index .font {
+    font-size: 20px;
+    color: blueviolet;
+    background: url("../images/icon.png") no-repeat;
+}
+
+.index .img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
