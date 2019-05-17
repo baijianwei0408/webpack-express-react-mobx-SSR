@@ -9,9 +9,9 @@
         "build-prod": "webpack --config src/webpack/prod/webpack.config.js",
         "start-dev": "node src/webpack/dev/server.js",
         "start-prod": "node src/webpack/prod/server.js",
-        "dev": "cross-env NODE_ENV=dev npm run start-dev",
-        "prod": "cross-env NODE_ENV=prod npm run build-prod && npm run start-prod",
-        "server": "cross-env NODE_ENV=prod webpack --config src/webpack/server/webpack.config.server.js && babel-node src/webpack/server/server.js"
+        "dev": "cross-env NODE_ENV=develop npm run start-dev",
+        "prod": "cross-env NODE_ENV=production npm run build-prod && npm run start-prod",
+        "server": "cross-env NODE_ENV=production webpack --config src/webpack/server/webpack.config.server.js && babel-node src/webpack/server/server.js"
     },
     "author": "",
     "license": "ISC",
