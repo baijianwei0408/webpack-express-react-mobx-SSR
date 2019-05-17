@@ -5,7 +5,8 @@ import assethook from 'asset-require-hook';
 
 assethook({
     extensions: ['jpg', 'png', 'gif', 'webp'],
-    name: 'images/[name].[hash:6].[ext]',
+    name: 'images/[name].[ext]',
+    // name: 'images/[name].[hash:6].[ext]',
     limit: 10240
 })
 

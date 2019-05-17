@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import BaseComponent from '../base/BaseComponent';
 import { Link } from 'react-router-dom';
 import { observer, inject } from 'mobx-react';
-import './index.css';
-// import icon from '../images/icon.png';
-import Title from '../components/Title';
+import '../index.css';
+import Title from '../../components/Title';
 
-const requireImg = require('../utils/requireImg');
-const icon = requireImg('../images/icon.png');
+const requireImg = require('../../utils/requireImg');
+const icon = requireImg('../../images/icon.png');
 
 
 @inject('testStore')
 @observer
-class Index extends BaseComponent {
+class Other extends Component {
 
     constructor(props) {
         super(props)
@@ -28,6 +26,7 @@ class Index extends BaseComponent {
 
     render() {
         let { testStore } = this.props
+        // var icon = require('../images/icon.png');
 
         return <div className='index'>
             <Title/>
@@ -37,11 +36,6 @@ class Index extends BaseComponent {
 
             <img src={icon} className='img'/>
             <Link to="/about">
-                <button onClick={this.clickMe}>
-                    Nav To About Page
-                </button>
-            </Link>
-            <Link to="/other">
                 <button onClick={this.clickMe}>
                     Nav To Other Page
                 </button>
@@ -56,4 +50,4 @@ class Index extends BaseComponent {
 
 }
 
-export default Index;
+export default Other;
